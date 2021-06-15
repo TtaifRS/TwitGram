@@ -11,13 +11,18 @@ const app = express();
 
 dotenv.config();
 
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => {
     console.log('Connected to mongo');
-  }
-);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
 //middleware
 app.use(express.json());
