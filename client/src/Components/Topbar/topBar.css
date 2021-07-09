@@ -1,0 +1,134 @@
+.topbarContainer {
+  width: 100%;
+  height: 50px;
+  background-color: #652ead;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.topbarLeft {
+  flex: 3;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  color: whitesmoke;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.topbarCenter {
+  flex: 5;
+}
+
+.searchbar {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+.searchInput {
+  width: 70%;
+  border: none;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.topbarRight {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  justify-content: space-evenly;
+  color: white;
+}
+
+.topbarLink {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.topbarIcons {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.topbarIconItem {
+  margin-right: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color: #be2727;
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+  right: -5px;
+  font-size: 10px;
+}
+.topbarImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.menuIcon {
+  display: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .topbarContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+  }
+  .topbarLeft {
+    flex: 1;
+  }
+  .logo {
+    font-size: 18px;
+    margin-left: 16px;
+  }
+  .topbarLinks {
+    display: none;
+  }
+  .topbarRight {
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .topbarCenter {
+    display: none;
+  }
+  .menuIcon {
+    display: flex !important;
+    font-weight: bold !important;
+    font-size: 28px !important;
+  }
+}
