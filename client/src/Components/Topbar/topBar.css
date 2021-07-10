@@ -130,5 +130,6 @@
     display: flex !important;
     font-weight: bold !important;
     font-size: 28px !important;
+    color: white;
   }
 }
