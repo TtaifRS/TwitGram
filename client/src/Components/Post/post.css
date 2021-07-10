@@ -74,4 +74,15 @@
   cursor: pointer;
   position: relative;
   top: -3px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .postContainer {
+    overflow: hidden;
+  }
+  .postWrapper {
+    padding: 10px;
+    width: calc(100vw-10px);
+  }
 }
