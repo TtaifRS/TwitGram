@@ -12,7 +12,7 @@ const Post = ({ post }) => {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
-  console.log(like);
+
   return (
     <div className="postContainer">
       <div className="postWrapper">
