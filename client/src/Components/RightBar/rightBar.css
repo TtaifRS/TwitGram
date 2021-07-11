@@ -82,6 +82,51 @@
   font-weight: 400;
 }
 
+.profileRightbarTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.profileRightbarInfo {
+  margin-bottom: 30px;
+}
+
+.profileRightbarInfoItem {
+  margin-bottom: 10px;
+}
+
+.profileRightbarInfoKey {
+  font-weight: 400;
+  margin-right: 15px;
+  color: #555;
+}
+
+.profileRightbarInfoValue {
+  font-weight: 300;
+}
+
+.profileRightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profileRightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.profileRightbarImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   .rightbarContainer {
     display: none;

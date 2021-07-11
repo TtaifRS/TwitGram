@@ -40,7 +40,12 @@ const Post = ({ post }) => {
           <img src={post?.photo} alt="train" className="postImg" />
         </div>
         <div className="postBottom">
-          <span className="postLike">{like}</span>
+          <span className="postLike">
+            {like}
+            <span style={{ color: 'rgba(255,255,255,.5)', marginLeft: '6px' }}>
+              people liked this post
+            </span>
+          </span>
           <ThumbUpAlt
             htmlColor="#652EAD"
             className="postLikeIcon"

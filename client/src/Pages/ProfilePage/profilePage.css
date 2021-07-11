@@ -1,0 +1,14 @@
+.profileContainer {
+  display: flex;
+}
+
+.profileRight {
+  flex: 10;
+}
+
+.profileRightTop {
+  margin-bottom: 30px;
+}
+.profileRightBottom {
+  display: flex;
+}

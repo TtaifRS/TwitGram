@@ -34,12 +34,16 @@ const chatDatas = [
     src: '/assets/person/9.jpeg',
     name: 'Maria dave',
   },
+  {
+    src: '/assets/person/10.jpg',
+    name: 'Sufi dave',
+  },
 ];
 
-const RightBar = () => {
-  return (
-    <div className="rightbarContainer">
-      <div className="rightbarWrapper">
+const RightBar = ({ profile }) => {
+  const HomeRightBar = () => {
+    return (
+      <>
         <div className="birthdayContainer">
           <img
             src="/assets/gift.png"
@@ -66,6 +70,48 @@ const RightBar = () => {
             );
           })}
         </ul>
+      </>
+    );
+  };
+
+  const ProfileRightBar = () => {
+    return (
+      <>
+        <h4 className="profileRightbarTitle">User information</h4>
+        <div className="profileRightbarInfo">
+          <div className="profileRightbarInfoItem">
+            <span className="profileRightbarInfoKey">City:</span>
+            <span className="profileRightbarInfoValue">Barcelona</span>
+          </div>
+          <div className="profileRightbarInfoItem">
+            <span className="profileRightbarInfoKey">Country:</span>
+            <span className="profileRightbarInfoValue">Spain</span>
+          </div>
+          <div className="profileRightbarInfoItem">
+            <span className="profileRightbarInfoKey">Relationship:</span>
+            <span className="profileRightbarInfoValue">Complicated</span>
+          </div>
+        </div>
+        <h4 className="profileRightbarTitle">User friends</h4>
+        <div className="profileRightbarFollowings">
+          {chatDatas.map((data, i) => {
+            const { src, name } = data;
+            return (
+              <div className="profileRightbarFollowing">
+                <img src={src} alt={name} className="profileRightbarImg" />
+                <span className="profileRightbarFollowingName">{name}</span>
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <div className="rightbarContainer">
+      <div className="rightbarWrapper">
+        <ProfileRightBar />
       </div>
     </div>
   );
