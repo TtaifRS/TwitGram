@@ -1,5 +1,5 @@
-import React from 'react';
-import './rightBar.css';
+import React from 'react'
+import './rightBar.css'
 
 const chatDatas = [
   {
@@ -38,7 +38,7 @@ const chatDatas = [
     src: '/assets/person/10.jpg',
     name: 'Sufi dave',
   },
-];
+]
 
 const RightBar = ({ profile }) => {
   const HomeRightBar = () => {
@@ -58,7 +58,7 @@ const RightBar = ({ profile }) => {
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarChatList">
           {chatDatas.map((data, i) => {
-            const { src, name } = data;
+            const { src, name } = data
             return (
               <li className="rightbarChatFriend" key={i}>
                 <div className="rightbarFriendImgContainer">
@@ -67,12 +67,12 @@ const RightBar = ({ profile }) => {
                 </div>
                 <span className="rightbarFriendName">{name}</span>
               </li>
-            );
+            )
           })}
         </ul>
       </>
-    );
-  };
+    )
+  }
 
   const ProfileRightBar = () => {
     return (
@@ -95,18 +95,18 @@ const RightBar = ({ profile }) => {
         <h4 className="profileRightbarTitle">User friends</h4>
         <div className="profileRightbarFollowings">
           {chatDatas.map((data, i) => {
-            const { src, name } = data;
+            const { src, name } = data
             return (
-              <div className="profileRightbarFollowing">
+              <div className="profileRightbarFollowing" key={i}>
                 <img src={src} alt={name} className="profileRightbarImg" />
                 <span className="profileRightbarFollowingName">{name}</span>
               </div>
-            );
+            )
           })}
         </div>
       </>
-    );
-  };
+    )
+  }
 
   return (
     <div className="rightbarContainer">
@@ -114,7 +114,7 @@ const RightBar = ({ profile }) => {
         {profile ? <ProfileRightBar /> : <HomeRightBar />}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RightBar;
+export default RightBar
